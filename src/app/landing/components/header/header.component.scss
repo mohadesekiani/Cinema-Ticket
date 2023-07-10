@@ -1,0 +1,28 @@
+.it-header {
+  margin: auto;
+}
+.toolbar {
+  background-color: #131313;
+  color: #cbcbcb;
+  overflow: hidden;
+  display: flex;
+}
+.item-tolbar-flex {
+  flex: 1;
+}
+.item-tolbar {
+  //border: 1px solid red;
+  flex: 2;
+  text-align: center;
+  margin: 0 auto;
+}
+.it-button {
+  padding: 5px 7px;
+  border: 2px solid #cbcbcb;
+  border-radius: 7px;
+  background-color: #131313;
+  color: #cbcbcb;
+}
+.text-center {
+  text-align: center;
+}

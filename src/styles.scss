@@ -1,0 +1,13 @@
+@import "~normalize.css/normalize.css";
+@import "./styles/material";
+@import '/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import '/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+html,
+body {
+  height: 100%;
+  font-family: IRANSansXFaNum !important;
+  background-color: #131313;
+  color: #cbcbcb;
+  direction: rtl;
+
+}
