@@ -7,20 +7,21 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { LandingRoutingModule } from './landing-routing.module';
-
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CarouselHolderComponent } from './components/carousel-holder/carousel-holder.component';
 @NgModule({
   declarations: [
     LandingComponent,
     HeaderComponent,
     SlideShowComponent,
+    CarouselHolderComponent,
   ],
   imports: [
+    CarouselModule,
     CommonModule,
     RouterModule,
     SharedModule,
-    LandingRoutingModule
+    LandingRoutingModule,
   ],
-    
 })
 export class LandingModule {}
