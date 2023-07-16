@@ -1,0 +1,14 @@
+.item{
+    border: 1px solid red;
+}
+
+.it-home-movie-slider-img[alt] {
+    height: calc((100vw - 120px) / 2);
+}
+.it-home-movie-slider-img {
+    width: 100%;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.35);
+}

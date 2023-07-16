@@ -9,31 +9,42 @@ export class CarouselHolderComponent {
   slidesStore: any[] = [
     {
       id: 1,
-      src: 'path/to/image1.jpg',
+      src: 'https://static.irantic.com/storage/dynamic/slider/y6D28q3SuzQLKw8AJJLUexatjAqDYBckwIOuCZ9n.jpg',
       alt: 'Slide 1',
       title: 'Slide 1'
     },
     {
       id: 2,
-      src: 'path/to/image2.jpg',
+      src: 'https://static.irantic.com/storage/dynamic/slider/hciEFMfZgh2S2WOe6E9xy0pObe4FXAJWGBe73uQx.jpg',
       alt: 'Slide 2',
       title: 'Slide 2'
     },
     {
       id: 3,
-      src: 'path/to/image3.jpg',
+      src: 'https://static.irantic.com/storage/dynamic/slider/iWxfNaQGRLlh85uCkLYXweGvtviEcfdFS4MgPrrP.jpg',
+      alt: 'Slide 3',
+      title: 'Slide 3'
+    }, {
+      id: 4,
+      src: 'https://static.irantic.com/storage/dynamic/slider/iWxfNaQGRLlh85uCkLYXweGvtviEcfdFS4MgPrrP.jpg',
+      alt: 'Slide 3',
+      title: 'Slide 3'
+    }, {
+      id: 5,
+      src: 'https://static.irantic.com/storage/dynamic/slider/iWxfNaQGRLlh85uCkLYXweGvtviEcfdFS4MgPrrP.jpg',
       alt: 'Slide 3',
       title: 'Slide 3'
     }
+
     // مشخصات سایر اسلایدها
   ];
-
+  
   customOptions: OwlOptions = {
     loop: true,
-    mouseDrag: false,
+    mouseDrag: true,
     touchDrag: false,
     pullDrag: false,
-    dots: false,
+    dots: true,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
@@ -41,15 +52,14 @@ export class CarouselHolderComponent {
         items: 1,
       },
       400: {
-        items: 2,
+        items: 1,
       },
       740: {
-        items: 3,
+        items: 1,
       },
-      940: {
-        items: 4,
-      },
+      
     },
     nav: true,
   };
 }
+
