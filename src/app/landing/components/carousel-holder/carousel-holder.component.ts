@@ -6,36 +6,26 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./carousel-holder.component.scss'],
 })
 export class CarouselHolderComponent {
+  //windows + v plz
   slidesStore: any[] = [
     {
       id: 1,
-      src: 'https://static.irantic.com/storage/dynamic/slider/y6D28q3SuzQLKw8AJJLUexatjAqDYBckwIOuCZ9n.jpg',
+      src: 'path/to/image1.jpg',
       alt: 'Slide 1',
       title: 'Slide 1'
     },
     {
       id: 2,
-      src: 'https://static.irantic.com/storage/dynamic/slider/hciEFMfZgh2S2WOe6E9xy0pObe4FXAJWGBe73uQx.jpg',
+      src: 'path/to/image2.jpg',
       alt: 'Slide 2',
       title: 'Slide 2'
     },
     {
       id: 3,
-      src: 'https://static.irantic.com/storage/dynamic/slider/iWxfNaQGRLlh85uCkLYXweGvtviEcfdFS4MgPrrP.jpg',
-      alt: 'Slide 3',
-      title: 'Slide 3'
-    }, {
-      id: 4,
-      src: 'https://static.irantic.com/storage/dynamic/slider/iWxfNaQGRLlh85uCkLYXweGvtviEcfdFS4MgPrrP.jpg',
-      alt: 'Slide 3',
-      title: 'Slide 3'
-    }, {
-      id: 5,
-      src: 'https://static.irantic.com/storage/dynamic/slider/iWxfNaQGRLlh85uCkLYXweGvtviEcfdFS4MgPrrP.jpg',
+      src: 'path/to/image3.jpg',
       alt: 'Slide 3',
       title: 'Slide 3'
     }
-
     // مشخصات سایر اسلایدها
   ];
   
