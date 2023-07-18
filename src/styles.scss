@@ -1,7 +1,7 @@
 @import "~normalize.css/normalize.css";
 @import "./styles/material";
-@import '/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import '/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+@import "/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 html,
 body {
   height: 100%;
@@ -9,5 +9,15 @@ body {
   background-color: #131313;
   color: #cbcbcb;
   direction: rtl;
-
+}
+.owl-theme .owl-nav {
+  margin-top: -60px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  // top: 150px;
+  left: calc((100vw - 120px) / 2);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
 }

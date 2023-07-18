@@ -10,31 +10,31 @@ export class CarouselHolderComponent {
   slidesStore: any[] = [
     {
       id: 1,
-      src: 'path/to/image1.jpg',
+      src: 'https://static.irantic.com/storage/dynamic/slider/VTerxDuWUFKNvPCz2JxwtDjmWIlaPj7T1lCFfzdZ.jpg',
       alt: 'Slide 1',
-      title: 'Slide 1'
+      title: 'Slide 1',
     },
     {
       id: 2,
-      src: 'path/to/image2.jpg',
+      src: 'https://static.irantic.com/storage/dynamic/slider/tW2Hb6Y6ek9ha3FvqjxK5HfgcM8g4llQU3ujJ829.jpg',
       alt: 'Slide 2',
-      title: 'Slide 2'
+      title: 'Slide 2',
     },
     {
       id: 3,
-      src: 'path/to/image3.jpg',
+      src: 'assets/images/img-slideShow.png',
       alt: 'Slide 3',
-      title: 'Slide 3'
-    }
+      title: 'Slide 3',
+    },
     // مشخصات سایر اسلایدها
   ];
-  
+
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
     touchDrag: false,
     pullDrag: false,
-    dots: true,
+    dots: false,
     navSpeed: 700,
     navText: ['', ''],
     responsive: {
@@ -47,9 +47,7 @@ export class CarouselHolderComponent {
       740: {
         items: 1,
       },
-      
     },
     nav: true,
   };
 }
-

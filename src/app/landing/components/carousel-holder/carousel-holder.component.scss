@@ -1,14 +1,40 @@
-.item{
-    border: 1px solid red;
+.item {
+  border: 1px solid red;
 }
 
 .it-home-movie-slider-img[alt] {
-    height: calc((100vw - 120px) / 2);
+  height: calc((100vw - 120px) / 2);
 }
 .it-home-movie-slider-img {
-    width: 100%;
-    -webkit-border-radius: 15px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    box-shadow: 0 5px 10px rgba(0,0,0,.35);
+  width: 100%;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+}
+
+// .owl-theme[_ngcontent-ng-c3098439908] {
+//   position: relative;
+//   display: inline-block;
+// }
+
+// .owl-theme .owl-nav {
+//   position: absolute;
+//   top: 0;
+//   left: calc((100vw - 120px) / 2);
+
+//   background-color: rgba(0, 0, 0, 0.5); /* تنظیم رنگ پوشش */
+//   color: white; /* تنظیم رنگ متن داخل دیو */
+//   padding: 10px; /* تنظیم حاشیه داخلی برای دیو */
+// }
+.owl-theme .owl-nav {
+  margin-top: 10px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  position: absolute;
+  top: 0;
+  left: calc((100vw - 120px) / 2);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
 }
