@@ -1,0 +1,146 @@
+// .footerBox{
+//     border-top: 2px solid #707070;
+//     margin: 20px;
+// }
+/* Footer Styles */
+// .footer {
+//     background-color: #333;
+//     color: #fff;
+//     padding: 50px 0;
+//   }
+  
+//   .footer h3 {
+//     color: #fff;
+//     font-size: 20px;
+//     margin-bottom: 30px;
+//   }
+  
+//   .footer p {
+//     font-size: 16px;
+//     line-height: 24px;
+//     margin-bottom: 30px;
+//   }
+  
+//   .footer ul {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+//   }
+  
+//   .footer ul li {
+//     margin-bottom: 10px;
+//   }
+  
+//   .footer ul li a {
+//     color: #fff;
+//     text-decoration: none;
+//     font-size: 16px;
+//     transition: color 0.3s ease;
+//   }
+  
+//   .footer ul li a:hover {
+//     color: #FFD700;
+//   }
+  
+//   .social-media li {
+//     display: inline-block;
+//     margin-right: 10px;
+//   }
+  
+//   .social-media li a {
+//     color: #fff;
+//     font-size: 20px;
+//     transition: color 0.3s ease;
+//   }
+  
+//   .social-media li a:hover {
+//     color: #FFD700;
+//   }
+  
+//   .footer-bottom {
+//     background-color: #222;
+//     color: #ccc;
+//     padding: 10px 0;
+//   }
+  
+//   .footer-bottom p {
+//     margin: 0;
+//     font-size: 14px;
+//     text-align: center;
+//   }
+  /* Footer Styles */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 50px 0;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    width: 30%;
+    margin-bottom: 40px;
+  }
+  
+  .footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #FFD700;
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .social-media li {
+    margin-right: 10px;
+  }
+  
+  .social-media li a {
+    color: #fff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+  }
+  
+  .social-media li a:hover {
+    color: #FFD700;
+  }
+  
+  .footer-bottom {
+    background-color: #111;
+    color: #ccc;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 12px;
+  }
+  
