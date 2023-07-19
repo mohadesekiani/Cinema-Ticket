@@ -22,7 +22,7 @@ export class CarouselHolderComponent {
     },
     {
       id: 3,
-      src: 'assets/images/img-slideShow.png',
+      src: '',
       alt: 'Slide 3',
       title: 'Slide 3',
     },

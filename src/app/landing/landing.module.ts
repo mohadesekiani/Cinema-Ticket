@@ -9,12 +9,14 @@ import { SharedModule } from '../shared/shared.module';
 import { LandingRoutingModule } from './landing-routing.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselHolderComponent } from './components/carousel-holder/carousel-holder.component';
+import { IntroductionComponent } from './components/introduction/introduction.component';
 @NgModule({
   declarations: [
     LandingComponent,
     HeaderComponent,
     SlideShowComponent,
     CarouselHolderComponent,
+    IntroductionComponent,
   ],
   imports: [
     CarouselModule,
