@@ -20,12 +20,7 @@ export class CarouselHolderComponent {
       alt: 'Slide 2',
       title: 'Slide 2',
     },
-    {
-      id: 3,
-      src: '',
-      alt: 'Slide 3',
-      title: 'Slide 3',
-    },
+
     // مشخصات سایر اسلایدها
   ];
 

@@ -1,8 +1,18 @@
-
-<owl-carousel-o [options]="customOptions" dir="ltr">
-  <ng-container *ngFor="let slide of slidesStore">
-    <ng-template carouselSlide [id]="slide.id">
-        <img [src]="slide.src" class="it-home-movie-slider-img " [alt]="slide.alt" [title]="slide.title" />
-    </ng-template>
-  </ng-container>
-</owl-carousel-o>
+<div class="mx-20">
+  <span class="textTitle my-8"> سینمای ایران </span>
+  <div class="my-4">
+    <owl-carousel-o [options]="customOptions" dir="ltr">
+      <ng-container *ngFor="let slide of slidesStore">
+        <ng-template carouselSlide [id]="slide.id">
+          <img
+            style="height: 25rem"
+            [src]="slide.src"
+            class="it-home-movie-slider-img"
+            [alt]="slide.alt"
+            [title]="slide.title"
+          />
+        </ng-template>
+      </ng-container>
+    </owl-carousel-o>
+  </div>
+</div>
