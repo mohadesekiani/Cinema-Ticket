@@ -10,7 +10,10 @@ import { LandingRoutingModule } from './landing-routing.module';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselHolderComponent } from './components/carousel-holder/carousel-holder.component';
 import { IntroductionComponent } from './components/introduction/introduction.component';
+
 import { PostsComponent } from './components/posts/posts.component';
+import { FooterComponent } from './components/footer/footer.component';
+
 @NgModule({
   declarations: [
     LandingComponent,
@@ -19,6 +22,7 @@ import { PostsComponent } from './components/posts/posts.component';
     CarouselHolderComponent,
     IntroductionComponent,
     PostsComponent,
+    FooterComponent,
   ],
   imports: [
     CarouselModule,
