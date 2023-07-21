@@ -1,6 +1,7 @@
 .dis-ul-li {
-  display: inline-block; 
-  margin-right: 5px;
+ // text-align: center;
+  display: inline-block;
+  margin-top: 5px;
   font-size: 13px;
 }
 .dott {
@@ -14,16 +15,22 @@ button {
   color: #fbcd35;
   margin: 5px;
 }
+a{
+  height: 10%;
+  text-align: center;
+  margin-top: 80px;
+  margin-left: 30%;
+  margin-right: 30%;
+  padding-left: auto;
+  padding-right:auto ;
+  padding-top: 15px;
+}
 .box {
   position: relative;
   border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-  width: 90%;
+  width: 100%;
   background: #242424;
-  padding: 16px;
+  //padding: 16px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -31,12 +38,13 @@ button {
   margin-top: -100px;
   margin-right: auto;
   margin-left: auto;
+  
 }
 .pic {
   margin: 10px auto;
   position: relative;
   z-index: 1;
-  width: 130px;
+  width: calc((100% ) / 2);
   height: 150px;
   overflow: hidden;
   border-radius: 8px;

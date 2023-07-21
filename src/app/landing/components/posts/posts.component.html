@@ -1,31 +1,38 @@
-<div class="grid grid-cols-4 gap-6 mx-20 my-5">
-  <div style="position: relative;margin: auto;">
-    <div class="pic">
-      <img
-        src="https://static.irantic.com/storage/show/show_image/qEhT74XnljSnjszUYRDzrwHkcVpzVXWCxFjn7qzh.jpg"
-        alt=""
-      />
-    </div>
-    <div class="box" style="text-align: center;">
-      <a style="margin-top: 95px">جنگ کثیف</a>
-      <ul class="dis-ul-li" >
-        <li class="dis-ul-li">
-          <span class="dott">.</span>
-          فیلم‌
-        </li>
-        <li class="dis-ul-li">
-          <span class="dott">.</span>
-          اجتماعی
-        </li>
-        <li class="dis-ul-li">
-          <span class="dott">.</span>
-          120دقیقه
-        </li>
-      </ul>
-      <button style="text-align: center;">
-        <mat-icon class="py-2">add_shopping_cart</mat-icon>
-        خرید بلیط
-      </button>
+<div style="text-align: center;">
+  <span class="textTitle my-8" style="  border-bottom: 1px solid white;text-align: center;"> بلیط سینما  </span>
+
+  <div class="grid grid-cols-4 gap-4 mx-20 my-5" >
+
+    <div  style="position: relative;margin: auto;" *ngFor="let post of posts" >
+      <div class="pic">
+        <img
+          src={{post.img}}
+          alt=""
+        />
+      </div>
+      <div class="box" style="text-align: center;">
+        <a >{{post.title}}</a>
+        
+        <ul class="dis-ul-li" style="text-align:center" >
+          <li class="dis-ul-li">
+            <span class="dott">.</span>
+            {{post.type}}
+          </li>
+          <li class="dis-ul-li">
+            <span class="dott">.</span>
+            {{post.typeMovies}}
+          </li>
+          <li class="dis-ul-li">
+            <span class="dott">.</span>
+            {{post.time}}دقیقه
+          </li>
+        </ul>
+        <button style="text-align: center;">
+          <mat-icon class="py-2">add_shopping_cart</mat-icon>
+          خرید بلیط
+        </button>
+      </div>
     </div>
   </div>
 </div>
+
