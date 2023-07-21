@@ -44,12 +44,12 @@
 
 .social-media {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
 }
-
 .social-media li {
-  margin-right: 10px;
+  margin-left: 10px;
+  margin-right: 0px;
 }
 
 .social-media li a {
