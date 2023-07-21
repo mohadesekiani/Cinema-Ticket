@@ -7,8 +7,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-
-
+import { DataService } from './core/services/data/data.service';
+import { FakeDataService } from "./core/services/data/fake-data.service";
+import { ABDataService } from './core/services/data/abstract-data.service';
+let production = false;
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,15 @@ import { CommonModule } from '@angular/common';
     BrowserAnimationsModule,
     SharedModule
   ],
-  providers: [],
+  providers: [
+   
+    {
+      provide: ABDataService,
+      useClass: production ? DataService : FakeDataService,
+    },
+
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
