@@ -4,10 +4,19 @@
 
 @import "/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
 @import "/node_modules/ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+@font-face {
+  font-family: 'IRANSansXFaNum';
+  src: url("https://db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.eot"),
+  url("https://db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/5c53f1a72f61b5b51e2ea79a22ebc38b.ttf")format("truetype"),
+}
 html,
 body {
   height: 100%;
-  font-family: IRANSansXFaNum !important;
+  font-family: 'IRANSansXFaNum', Arial, sans-serif !important;
+
+  //font-family: IRANSansXFaNum !important;
   background-color: #131313;
   color: #cbcbcb;
   direction: rtl;
