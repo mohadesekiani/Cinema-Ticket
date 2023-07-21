@@ -1,5 +1,5 @@
 .dis-ul-li {
-  display: inline-block; /* یا از inline-block استفاده کنید */
+  display: inline-block; 
   margin-right: 5px;
   font-size: 13px;
 }
@@ -8,36 +8,36 @@
   font-size: 30px;
 }
 button {
-  //justify-content: center;
   align-items: center;
-  // display: flex;
-  // height: ;
   width: 95%;
-  //  background: transparent;
   border: 1px solid #fbcd35;
   color: #fbcd35;
   margin: 5px;
 }
 .box {
+  position: relative;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-  width: 100%;
+  width: 90%;
   background: #242424;
   padding: 16px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  min-height: 250px;
-  position: relative;
-  margin-top: 50px;
+  min-height: 200px;
+  margin-top: -100px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .pic {
+  margin: 10px auto;
+  position: relative;
+  z-index: 1;
   width: 130px;
-  height: 182px;
+  height: 150px;
   overflow: hidden;
-  position: absolute;
-  right: 107px;
+  border-radius: 8px;
 }
