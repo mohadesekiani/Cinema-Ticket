@@ -8,12 +8,7 @@
 
   <!-- <div class="grid grid-cols-4 gap-4 mx-20 my-5" > -->
   <div
-    class="
-    grid 
-    sm:grid-cols-2 mx-10
-    md:grid-cols-3 
-    lg:grid-cols-4 gap-4 mx-20 my-5
-     "
+    class="grid sm:grid-cols-2 mx-10 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-20 my-5"
   >
     <div style="position: relative; margin: auto" *ngFor="let post of posts">
       <div class="pic">
@@ -36,7 +31,11 @@
             {{ post.time }}دقیقه
           </li>
         </ul>
-        <button style="text-align: center">
+        <button
+          (click)="buyTicket(post.id)"
+          style="text-align: center"
+          routerLink="sans/:id"
+        >
           <mat-icon class="py-2">add_shopping_cart</mat-icon>
           خرید بلیط
         </button>
