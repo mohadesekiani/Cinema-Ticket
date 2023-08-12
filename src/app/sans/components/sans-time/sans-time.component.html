@@ -1,10 +1,13 @@
-<div
-  style="position: relative; margin: auto; border: 1px solid red"
-  class="grid sm:grid-cols-2 mx-10 md:grid-cols-3 lg:grid-cols-4 gap-4 mx-20 my-5"
->
-  <ul class="dis-ul-li" style="text-align: center">
-    <li class="dis-ul-li"><!-- {{ post.type }} -->11:30</li>
-    <li class="dis-ul-li"><!-- {{ post.typeMovies }} -->20000</li>
-    <button style="text-align: center" routerLink="">انتخاب</button>
-  </ul>
+<div class="my-5 flex-container">
+  <div class="flex flex-wrap mx-4 md:mx-20" *ngFor="let item of sans">
+    <div class="box flex-item">
+      <ul class="dis-ul-li">
+        <li class="dis-ul-li">
+          {{ item.time }}
+        </li>
+        <li class="dis-ul-li">{{ item.money | currency : "IRR" : "" }}تومان</li>
+        <button style="text-align: center" routerLink="">انتخاب</button>
+      </ul>
+    </div>
+  </div>
 </div>

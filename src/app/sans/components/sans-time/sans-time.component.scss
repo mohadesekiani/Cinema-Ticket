@@ -1,0 +1,23 @@
+.flex-container {
+  display: flex;
+  overflow-x: auto; /* Add horizontal scroll if needed */
+}
+
+.flex-item {
+  flex: 0 0 auto;
+  margin: 0 10px; /* Adjust margin as needed */
+}
+button {
+  align-items: center;
+  width: 95%;
+  border: 1px solid #fbcd35;
+  color: #fbcd35;
+  margin: 5px;
+}
+.box {
+  border-radius: 8px;
+  background: #242424;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
