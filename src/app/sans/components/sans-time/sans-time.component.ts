@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ABDataService } from 'src/app/core/services/data/abstract-data.service';
 import { Ipost } from 'src/app/core/shema/models/Ipost';
@@ -11,13 +12,18 @@ import { Isans } from 'src/app/core/shema/models/Isans';
 })
 export class SansTimeComponent {
   sans: Array<Isans> = [];
-
-  constructor(private dataService: ABDataService) {}
+  itemSans: Array<any> = [];
+  constructor(
+    private dataService: ABDataService,
+    private route: ActivatedRoute,
+  ) {}
+  _id = this.route.snapshot.params['id'];
   ngOnInit(): void {
-    this.dataService.getFakedataSans().subscribe({
+    this.dataService.getFakedataSans(this._id).subscribe({
       next: (res) => {
         this.sans = res;
-        console.log(this.sans);
+        this.itemSans = res.sans;
+        // console.log(this.itemSans);
       },
       error: (err) => {
         console.log(err, 'خطای سرور');

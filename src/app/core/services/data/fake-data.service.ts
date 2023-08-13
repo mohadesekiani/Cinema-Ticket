@@ -20,7 +20,10 @@ export class FakeDataService extends ABDataService {
     //console.log(fakeData.Posts);
     return of(fakeData.Posts).pipe(delay(3000));
   }
-  public getFakedataSans(): Observable<Isans[]> {
-    return of(fakeData.Sans).pipe(delay(3000));
+  public getFakedataSans(id:number): Observable<any> {
+    return of(fakeData.Sans.find((item) => item.id === +id))
+    .pipe(
+      delay(3000)
+    );
   }
 }
