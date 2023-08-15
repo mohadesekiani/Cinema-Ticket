@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { toggleSeat } from 'src/app/state/counter/counter.action';
+import { Store } from '@ngrx/store';
+import { decrement, increment } from 'src/app/state/counter/counter.action';
 import { CounterState } from '../../../state/counter/counter.state';
 
 @Component({
@@ -8,6 +9,8 @@ import { CounterState } from '../../../state/counter/counter.state';
   styleUrls: ['./cinema-seats.component.scss'],
 })
 export class CinemaSeatsComponent {
+  constructor(private store: Store<{ counter: { counter: number } }>) {}
+  counter: number | undefined;
   rows = [
     [
       { active: false, id: 1 },
@@ -80,11 +83,15 @@ export class CinemaSeatsComponent {
       /* ... more seats ... */
     ],
   ];
-  count = 0;
+  ///count = 0;
   toggleSeat(seat: any) {
-    //this.store.dispatch(toggleSeat());
     seat.active = !seat.active;
-    seat.active ? (this.count += 1) : (this.count -= 1);
-    console.log(seat.id, this.count);
+    seat.active
+      ? this.store.dispatch(increment())
+      : this.store.dispatch(decrement());
+
+    this.store.select('counter').subscribe((data) => {
+      this.counter = data.counter;
+    });
   }
 }

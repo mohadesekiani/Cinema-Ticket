@@ -8,31 +8,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { DataService } from './core/services/data/data.service';
-import { FakeDataService } from "./core/services/data/fake-data.service";
+import { FakeDataService } from './core/services/data/fake-data.service';
 import { ABDataService } from './core/services/data/abstract-data.service';
-
+import { StoreModule } from '@ngrx/store';
+import { counterReducer } from './state/counter/counter.reducer';
 let production = false;
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
+    StoreModule.forRoot({ counter: counterReducer }),
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     CommonModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [
-   
     {
       provide: ABDataService,
       useClass: production ? DataService : FakeDataService,
     },
-
-
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
