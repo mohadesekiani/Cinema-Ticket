@@ -6,9 +6,10 @@ import { RouterModule } from '@angular/router';
 import { SansRoutingModule } from './sans-routing.module';
 import { SansTimeComponent } from './components/sans-time/sans-time.component';
 import { CinemaSeatsComponent } from './components/cinema-seats/cinema-seats.component';
+import { FormSansComponent } from './components/form-sans/form-sans.component';
 
 @NgModule({
-  declarations: [SansComponent, DateComponent, SansTimeComponent, CinemaSeatsComponent],
+  declarations: [SansComponent, DateComponent, SansTimeComponent, CinemaSeatsComponent, FormSansComponent],
   imports: [CommonModule, RouterModule, SansRoutingModule],
 })
 export class SansModule {}
