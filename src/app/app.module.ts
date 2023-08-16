@@ -12,6 +12,7 @@ import { FakeDataService } from './core/services/data/fake-data.service';
 import { ABDataService } from './core/services/data/abstract-data.service';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer } from './state/counter/counter.reducer';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 let production = false;
 @NgModule({
   declarations: [AppComponent],
@@ -23,6 +24,8 @@ let production = false;
     CommonModule,
     BrowserAnimationsModule,
     SharedModule,
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [
     {

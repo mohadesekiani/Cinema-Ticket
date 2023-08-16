@@ -1,12 +1,21 @@
 <div class="my-5 flex-container">
-  <div class="flex flex-wrap mx-4 md:mx-20" *ngFor="let item of itemSans">
-    <div class="box flex-item">
+  <div
+    class="flex flex-wrap mx-4 md:mx-20"
+    *ngFor="let item of itemSans"
+    key="item.index"
+  >
+    <div
+      class="box flex-item"
+      (click)="selectedSans(item)"
+      [ngClass]="{
+        active: item.active && activeIndex === itemSans.indexOf(item)
+      }"
+    >
       <ul class="dis-ul-li">
         <li class="dis-ul-li">
           {{ item.time }}
         </li>
         <li class="dis-ul-li">{{ item.money | currency : "IRR" : "" }}تومان</li>
-        <button style="text-align: center" routerLink="">انتخاب</button>
       </ul>
     </div>
   </div>

@@ -9,7 +9,13 @@ import { CinemaSeatsComponent } from './components/cinema-seats/cinema-seats.com
 import { FormSansComponent } from './components/form-sans/form-sans.component';
 
 @NgModule({
-  declarations: [SansComponent, DateComponent, SansTimeComponent, CinemaSeatsComponent, FormSansComponent],
+  declarations: [
+    SansComponent,
+    DateComponent,
+    SansTimeComponent,
+    CinemaSeatsComponent,
+    FormSansComponent,
+  ],
   imports: [CommonModule, RouterModule, SansRoutingModule],
 })
 export class SansModule {}

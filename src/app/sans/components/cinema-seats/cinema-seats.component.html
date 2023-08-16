@@ -4,8 +4,9 @@
     <div
       class="seat"
       *ngFor="let seat of row"
-      (click)="toggleSeat(seat)"
+      (click)="toggleSeat(seat); refresValue()"
       [ngClass]="{ active: seat.active }"
     ></div>
   </div>
 </div>
+<div>{{ counter }}</div>

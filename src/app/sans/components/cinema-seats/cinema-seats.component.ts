@@ -1,16 +1,23 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { decrement, increment } from 'src/app/state/counter/counter.action';
-import { CounterState } from '../../../state/counter/counter.state';
+import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
   selector: 'app-cinema-seats',
   templateUrl: './cinema-seats.component.html',
   styleUrls: ['./cinema-seats.component.scss'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      multi: true,
+      useExisting: CinemaSeatsComponent,
+    },
+  ],
 })
-export class CinemaSeatsComponent {
+export class CinemaSeatsComponent implements ControlValueAccessor {
   constructor(private store: Store<{ counter: { counter: number } }>) {}
-  counter: number | undefined;
+  //counter: number | undefined;
   rows = [
     [
       { active: false, id: 1 },
@@ -93,5 +100,42 @@ export class CinemaSeatsComponent {
     this.store.select('counter').subscribe((data) => {
       this.counter = data.counter;
     });
+  }
+
+  // ########################################################
+  //              control value accessor scope              #
+  // ########################################################
+  counter: number = 0;
+  disabled = false;
+  touched = false;
+  onChange = (counter: number) => {};
+  onTouched = () => {};
+
+  writeValue(obj: any): void {
+    this.counter = obj;
+  }
+
+  registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
+
+  registerOnTouched(fn: any): void {
+    this.onTouched = fn;
+  }
+
+  setDisabledState?(isDisabled: boolean): void {
+    this.disabled = isDisabled;
+  }
+
+  markAsTouched() {
+    if (!this.touched) {
+      this.onTouched();
+      this.touched = true;
+    }
+  }
+  //########################################
+  refresValue() {
+    this.onChange(this.counter);
+    this.markAsTouched();
   }
 }

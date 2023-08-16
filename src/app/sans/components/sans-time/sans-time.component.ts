@@ -13,11 +13,22 @@ import { Isans } from 'src/app/core/shema/models/Isans';
 export class SansTimeComponent {
   sans: Array<Isans> = [];
   itemSans: Array<any> = [];
+  selected: any | undefined;
+  activeIndex: number = -1;
   constructor(
     private dataService: ABDataService,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {}
   _id = this.route.snapshot.params['id'];
+  selectedSans(item: any) {
+    if (this.activeIndex !== -1) {
+      this.itemSans[this.activeIndex].active = false;
+    }
+    item.active = !item.active;
+    this.activeIndex = this.itemSans.indexOf(item);
+    console.log(this.itemSans[this.activeIndex]);
+    
+  }
   ngOnInit(): void {
     this.dataService.getFakedataSans(this._id).subscribe({
       next: (res) => {
