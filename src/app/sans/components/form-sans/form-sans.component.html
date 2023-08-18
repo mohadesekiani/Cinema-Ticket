@@ -81,7 +81,7 @@
         id="grid-last-name"
         type="text"
         formControlName="seatCount"
-        value="seatCount"
+        value="{{ cinemaForm.value.seatCount }}"
       />
     </div>
   </div>
@@ -98,6 +98,9 @@
         id="grid-last-name"
         type="text"
         formControlName="payment"
+        value="{{
+          cinemaForm.value.seatCount * cinemaForm.value.sansTime.money
+        }}"
       />
     </div>
   </div>
