@@ -6,7 +6,7 @@
   >
     <div
       class="box flex-item"
-      (click)="selectedSans(item)"
+      (click)="selectedSans(item); refresValue()"
       [ngClass]="{
         active: item.active && activeIndex === itemSans.indexOf(item)
       }"

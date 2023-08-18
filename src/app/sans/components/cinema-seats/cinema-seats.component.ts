@@ -17,7 +17,6 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 export class CinemaSeatsComponent implements ControlValueAccessor {
   constructor(private store: Store<{ counter: { counter: number } }>) {}
-  //counter: number | undefined;
   rows = [
     [
       { active: false, id: 1 },
@@ -90,7 +89,6 @@ export class CinemaSeatsComponent implements ControlValueAccessor {
       /* ... more seats ... */
     ],
   ];
-  ///count = 0;
   toggleSeat(seat: any) {
     seat.active = !seat.active;
     seat.active
