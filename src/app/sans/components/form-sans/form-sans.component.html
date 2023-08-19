@@ -1,108 +1,105 @@
-<form [formGroup]="cinemaForm">
-  <br />
-  form value ? {{ cinemaForm.value | json }}
-  <br />
-  <app-sans-time formControlName="sansTime"></app-sans-time>
-  <app-cinema-seats formControlName="seatCount"></app-cinema-seats>
-  <!-- <div>
-    <mat-label>نام</mat-label>
-    <input formControlName="name" matInput />
+<form [formGroup]="cinemaForm" class="w-3/4 m-auto">
+  <div class="my-4 md:mx-10">
+    <span> لطفا سانس موردنظر خود را انتخاب کنید: </span>
+
+    <app-sans-time formControlName="sansTime"></app-sans-time>
   </div>
-  <div>
-    <mat-label>نام خانوادگی</mat-label>
-    <input formControlName="family" matInput />
-  </div>
-  <div>
-    <mat-label> شماره تلفن</mat-label>
-    <input formControlName="phone" matInput />
-  </div>
-  <div>
-    <mat-label> تعداد بلیط</mat-label>
-    <input formControlName="seatCount" matInput />
-  </div>
-  <div>
-    <mat-label> مبلغ قابل پرداخت</mat-label>
-    <input formControlName="payment" matInput />
-  </div> -->
-  <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full md:w-1/2 px-3">
-      <label
-        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-        for="grid-last-name"
-      >
-        نام
-      </label>
-      <input
-        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-        id="grid-last-name"
-        type="text"
-        formControlName="firstName"
-      />
-    </div>
-    <div class="w-full md:w-1/2 px-3">
-      <label
-        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-        for="grid-last-name"
-      >
-        نام خانوادگی
-      </label>
-      <input
-        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-        id="grid-last-name"
-        type="text"
-        formControlName="lastName"
-      />
+  <div class="grid grid-cols-3 gap-4 md:mx-10">
+    <span> لطفا صندلی موردنظر خود را انتخاب کنید:</span>
+    <div class="py-8 col-span-2 ..." style="direction: ltr">
+      <app-cinema-seats formControlName="seatCount"></app-cinema-seats>
     </div>
   </div>
-  <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full md:w-1/2 px-3">
-      <label
-        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-        for="grid-last-name"
-      >
-        شماره تلفن
-      </label>
-      <input
-        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-        id="grid-last-name"
-        type="text"
-        formControlName="phone"
-      />
+  <div class="md:mx-10">
+    <span> لطفا اطلاعات خود را وارد کنید: </span>
+
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="grid-last-name"
+        >
+          نام
+        </label>
+        <input
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-last-name"
+          type="text"
+          formControlName="firstName"
+        />
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="grid-last-name"
+        >
+          نام خانوادگی
+        </label>
+        <input
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-last-name"
+          type="text"
+          formControlName="lastName"
+        />
+      </div>
     </div>
-    <div class="w-full md:w-1/2 px-3">
-      <label
-        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-        for="grid-last-name"
-      >
-        تعداد بلیط
-      </label>
-      <input
-        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-        id="grid-last-name"
-        type="text"
-        formControlName="seatCount"
-        value="{{ cinemaForm.value.seatCount }}"
-      />
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="grid-last-name"
+        >
+          شماره تلفن
+        </label>
+        <input
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-last-name"
+          type="text"
+          formControlName="phone"
+        />
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="grid-last-name"
+        >
+          تعداد بلیط
+        </label>
+        <input
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-last-name"
+          type="text"
+          formControlName="seatCount"
+          value="{{ cinemaForm.value.seatCount }}"
+        />
+      </div>
+    </div>
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="grid-last-name"
+        >
+          مبلغ قابل پرداخت
+        </label>
+        <input
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-last-name"
+          type="text"
+          formControlName="payment"
+          value="{{
+            cinemaForm.value.seatCount * cinemaForm.value.sansTime.money
+          }}"
+        />
+      </div>
     </div>
   </div>
-  <div class="flex flex-wrap -mx-3 mb-6">
-    <div class="w-full md:w-1/2 px-3">
-      <label
-        class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-        for="grid-last-name"
-      >
-        مبلغ قابل پرداخت
-      </label>
-      <input
-        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-        id="grid-last-name"
-        type="text"
-        formControlName="payment"
-        value="{{
-          cinemaForm.value.seatCount * cinemaForm.value.sansTime.money
-        }}"
-      />
-    </div>
+  <div class="mx-auto">
+    <button
+      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+    >
+      ذخیره اطلاعات
+    </button>
   </div>
 </form>
 
